@@ -1,0 +1,9 @@
+{% extends "blog/base.html" %}
+{% block content %}      
+    {% for post in posts %}
+        Author name is {{post.author}}
+        And he published a book named {{post.title}}
+        and it got published on {{post.date_posted}}
+    {% endfor %}
+{% endblock content %}  
+   
