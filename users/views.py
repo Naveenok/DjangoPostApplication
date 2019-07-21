@@ -24,18 +24,15 @@ def register(request):
 #user must be logged in to view this page
 @login_required
 def profile(request):
-    print("hi")
     #current user
-    if request.method =='POST':
-        print("cjfgfjgdfdfg")
+    if request.method =='POST':   
         #instance=request.user to know which user to update
         u_form= UserUpdateForm(request.POST,instance=request.user)
         #new file also comes with the request
-        p_form=ProfileUpdateForm(request.POST,
+        p_form=ProfileUpdateForm(request.POST, 
                                  request.FILES , 
                                 instance=request.user.profile)
         if u_form.is_valid() and p_form.is_valid():
-            
             u_form.save()
             p_form.save()
             messages.success(request,f'Your account has been updated!' )
