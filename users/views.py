@@ -19,7 +19,6 @@ def register(request):
 
 #user must be logged in to view this page
 @login_required
-
 def profile(request):
     #current user
     if request.method =='POST':   
