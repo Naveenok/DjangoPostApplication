@@ -3,10 +3,6 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from .forms import UserRegisterForm , ProfileUpdateForm ,UserUpdateForm
 from django.contrib.auth.decorators import login_required
-import logging
-
-
-logger = logging.getLogger(__name__)
 
 def register(request):
     if request.method=='POST':
@@ -23,6 +19,7 @@ def register(request):
 
 #user must be logged in to view this page
 @login_required
+
 def profile(request):
     #current user
     if request.method =='POST':   
