@@ -10,6 +10,7 @@
             "name": "Python: Django",
             "type": "python",
             "request": "launch",
+            "url":"http://127.0.0.1:8000/",
             "pythonPath": "C:\\Users\\oknav\\AppData\\Local\\Programs\\Python\\Python37\\python.exe",
             "program": "${workspaceFolder}\\manage.py",
             "args": [
